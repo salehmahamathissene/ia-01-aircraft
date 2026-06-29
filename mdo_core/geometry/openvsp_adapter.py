@@ -1,15 +1,10 @@
-def generate_geometry(state):
-    """
-    In real system: call OpenVSP API
-    Here: parametric surrogate model
-    """
+def build_wing(state):
+    span = state.get("span", 16.5)
+    area = state.get("wing_area", 28.0)
 
-    geometry = {
-        "span": state.span,
-        "area": state.wing_area,
-        "aspect_ratio": state.span**2 / state.wing_area,
-        "sweep": state.sweep,
-        "taper_ratio": 0.35
+    return {
+        "span": span,
+        "area": area,
+        "mean_chord": area / span,
+        "sweep": state.get("sweep", 5)
     }
-
-    return geometry
