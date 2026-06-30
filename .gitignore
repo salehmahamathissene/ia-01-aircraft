@@ -1,1 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
 .venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# OpenFOAM
+processor*/
+postProcessing/
+*.OpenFOAM
+
+# CFD
+*.foam
+constant/polyMesh/
+
+# Generated meshes
+*.msh
+*.vtk
+*.vtu
+
+# Results
+results/
+output/
+reports/generated/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
